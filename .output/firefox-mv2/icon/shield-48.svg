@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#3b82f6cc"/>
+      <stop offset="100%" stop-color="#3b82f688"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#bg)"/>
+  <g transform="translate(64,68)" filter="url(#glow)">
+    <path d="M0-40 C-8-42-32-36-36-20 L-34,8 C-30,24-16,36,0,44 C16,36,30,24,34,8 L36-20 C32-36,8-42,0-40Z"
+      fill="url(#shield)" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="0" y1="-30" x2="0" y2="36" stroke="#60a5fa44" stroke-width="1.5"/>
+    <line x1="-28" y1="-6" x2="28" y2="-6" stroke="#60a5fa44" stroke-width="1.5"/>
+  </g>
+</svg>

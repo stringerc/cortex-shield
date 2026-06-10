@@ -1,0 +1,98 @@
+/**
+ * CortexShield — Injected Content Styles
+ *
+ * These styles are injected into every page by the content script.
+ * They handle the visual treatment of blocked/flagged AI elements.
+ *
+ * All classes are prefixed with "cortex-shield-" to avoid conflicts.
+ * z-index 2147483647 ensures our badges appear above everything.
+ */
+
+/* Hidden elements — Guardian mode blocks */
+.cortex-shield-hidden {
+  display: none !important;
+}
+
+/* Blocked element marker (metadata only, element is hidden) */
+.cortex-shield-blocked {
+  /* This class is set but the element is display:none via cortex-shield-hidden */
+}
+
+/* User-allowed element — never re-block */
+.cortex-shield-allowed {
+  /* Marker only — no visual change */
+}
+
+/* Temporary allow (revealed by clicking placeholder) */
+.cortex-shield-temporary-allow {
+  display: block !important;
+  outline: 2px solid #22c55e !important;
+  outline-offset: -2px !important;
+}
+
+/* Placeholder container — the "white box" that replaces blocked AI */
+.cortex-shield-placeholder {
+  /* All inline styles applied via JS for dynamic sizing */
+  /* Base styles in case JS fails */
+  min-height: 60px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px dashed #cbd5e1 !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 12px !important;
+  color: #64748b !important;
+  cursor: pointer !important;
+  padding: 12px 16px !important;
+  text-align: center !important;
+  line-height: 1.4 !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+  margin: 4px 0 !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease !important;
+}
+
+.cortex-shield-placeholder:hover {
+  border-color: #3b82f6 !important;
+  background: rgba(239, 246, 255, 0.95) !important;
+}
+
+.cortex-shield-placeholder * {
+  /* Reset any inherited styles from the host page */
+  all: revert !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Flagged element — Sentry mode yellow border */
+.cortex-shield-flagged {
+  /* Outlined via JS for specificity, but this is the fallback */
+}
+
+/* Flag badge — the "AI" marker in the corner */
+.cortex-shield-flag-badge {
+  /* Positioned via JS for absolute positioning relative to parent */
+  /* This class exists for JS targeting — styles applied inline */
+}
+
+/* Dark mode page support — adjust placeholder for dark pages */
+@media (prefers-color-scheme: dark) {
+  .cortex-shield-placeholder {
+    background: rgba(30, 41, 59, 0.95) !important;
+    border-color: #475569 !important;
+    color: #94a3b8 !important;
+  }
+
+  .cortex-shield-placeholder:hover {
+    border-color: #60a5fa !important;
+    background: rgba(30, 58, 138, 0.3) !important;
+  }
+
+  .cortex-shield-placeholder span {
+    color: inherit !important;
+  }
+}

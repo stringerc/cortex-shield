@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CortexShield Icon Generator</title>
+</head>
+<body>
+<canvas id="canvas" width="128" height="128"></canvas>
+<script>
+// Generate all 3 mode icons + 1 notification variant
+// Ghost: gray shield | Sentry: blue shield | Guardian: red shield | Notification: orange badge
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const modes = [
+  { name: 'shield-ghost', color: '#6b7280', glow: '#9ca3af' },
+  { name: 'shield-sentry', color: '#3b82f6', glow: '#60a5fa' },
+  { name: 'shield-guardian', color: '#ef4444', glow: '#f87171' },
+  { name: 'shield-notification', color: '#f59e0b', glow: '#fbbf24' },
+];
+
+function drawShield(color, glow) {
+  ctx.clearRect(0, 0, 128, 128);
+
+  // Background — dark circle with subtle gradient
+  const bgGrad = ctx.createRadialGradient(64, 64, 20, 64, 64, 64);
+  bgGrad.addColorStop(0, '#1a1a2e');
+  bgGrad.addColorStop(1, '#0a0a0f');
+  ctx.fillStyle = bgGrad;
+  ctx.beginPath();
+  ctx.arc(64, 64, 62, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Shield shape — pointed bottom, curved top
+  ctx.save();
+  ctx.translate(64, 68);
+
+  // Glow effect
+  ctx.shadowColor = glow;
+  ctx.shadowBlur = 12;
+
+  // Shield path
+  ctx.beginPath();
+  ctx.moveTo(0, -40);       // top center
+  ctx.bezierCurveTo(-8, -42, -32, -36, -36, -20);  // top left curve
+  ctx.lineTo(-34, 8);       // left side
+  ctx.bezierCurveTo(-30, 24, -16, 36, 0, 44);      // bottom left to point
+  ctx.bezierCurveTo(16, 36, 30, 24, 34, 8);         // bottom right
+  ctx.lineTo(36, -20);      // right side
+  ctx.bezierCurveTo(32, -36, 8, -42, 0, -40);       // top right curve
+  ctx.closePath();
+
+  // Shield fill — gradient
+  const shieldGrad = ctx.createLinearGradient(0, -40, 0, 44);
+  shieldGrad.addColorStop(0, color);
+  shieldGrad.addColorStop(0.5, color + 'cc');
+  shieldGrad.addColorStop(1, color + '88');
+  ctx.fillStyle = shieldGrad;
+  ctx.fill();
+
+  // Shield border
+  ctx.strokeStyle = glow;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // Shield center divider line
+  ctx.beginPath();
+  ctx.moveTo(0, -30);
+  ctx.lineTo(0, 36);
+  ctx.strokeStyle = glow + '44';
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  // Horizontal bar
+  ctx.beginPath();
+  ctx.moveTo(-28, -6);
+  ctx.lineTo(28, -6);
+  ctx.strokeStyle = glow + '44';
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  ctx.restore();
+}
+
+// Generate each mode as a data URL
+modes.forEach(mode => {
+  drawShield(mode.color, mode.glow);
+  const dataUrl = canvas.toDataURL('image/png');
+  console.log(`${mode.name}: ${dataUrl.substring(0, 50)}...`);
+});
+
+// The main icon is sentry (blue)
+drawShield('#3b82f6', '#60a5fa');
+</script>
+</body>
+</html>
