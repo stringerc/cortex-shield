@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CortexShield — Feedback</title>
+<style>
+body{max-width:600px;margin:60px auto;padding:0 24px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;color:#e4e4f0;background:#0a0a0f;line-height:1.7}
+h1{font-size:24px;font-weight:700;margin-bottom:8px}
+p{color:#8888a0;margin-bottom:24px}
+form{display:flex;flex-direction:column;gap:12px}
+label{display:flex;align-items:flex-start;gap:10px;font-size:14px;cursor:pointer;padding:10px 14px;border:1px solid #252538;border-radius:8px;background:#14141f;transition:border-color 0.15s}
+label:hover{border-color:#3b82f6}
+input[type=checkbox]{margin-top:3px;accent-color:#3b82f6}
+textarea{width:100%;min-height:80px;padding:12px;border-radius:8px;border:1px solid #252538;background:#14141f;color:#e4e4f0;font-size:14px;font-family:inherit;resize:vertical}
+textarea:focus{outline:none;border-color:#3b82f6}
+button{padding:12px 24px;border-radius:8px;border:none;background:#3b82f6;color:white;font-size:14px;font-weight:600;cursor:pointer;transition:background 0.15s}
+button:hover{background:#2563eb}
+.skip{color:#555570;font-size:13px;text-align:center;margin-top:16px}
+.skip a{color:#3b82f6}
+</style>
+</head>
+<body>
+<h1>🛡️ Before you go</h1>
+<p>We'd love to know why you uninstalled CortexShield so we can improve.</p>
+
+<form action="https://github.com/stringerc/cortex-shield/issues/new" method="get" target="_blank">
+  <input type="hidden" name="labels" value="uninstall-feedback">
+
+  <label><input type="checkbox" name="reason" value="too-aggressive"> It blocked things I didn't want blocked</label>
+  <label><input type="checkbox" name="reason" value="not-aggressive-enough"> It didn't block things I wanted blocked</label>
+  <label><input type="checkbox" name="reason" value="performance"> It slowed down my browsing</label>
+  <label><input type="checkbox" name="reason" value="broke-sites"> It broke websites I use</label>
+  <label><input type="checkbox" name="reason" value="dont-need"> I don't need to block AI anymore</label>
+  <label><input type="checkbox" name="reason" value="trying-alternative"> I'm trying a different extension</label>
+  <label><input type="checkbox" name="reason" value="other"> Other reason</label>
+
+  <textarea name="body" placeholder="Tell us more (optional)..." aria-label="Additional feedback"></textarea>
+
+  <button type="submit">Submit Feedback</button>
+</form>
+
+<p class="skip">No thanks — <a href="https://stringerc.github.io/cortex-shield/">back to homepage</a></p>
+</body>
+</html>
