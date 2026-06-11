@@ -1,0 +1,24 @@
+[Adblock Plus 2.0]
+! Title: CortexShield — AI Social Features
+! Last Modified: 2026-06-10
+
+! X/Twitter Grok
+||api.x.ai^
+||grok.x.ai^
+##div[data-testid*="grok"]
+##div[class*="grok"]
+
+! Meta AI
+||api.meta.ai^
+##div[class*="meta-ai"]
+
+! LinkedIn AI
+##div[data-testid*="ai-assist"]
+
+! Reddit AI Summaries
+##div[class*="ai-summary"]
+##shreddit-ai-summary
+
+! Generic social AI
+##div[class*="ai-feed"]
+##div[class*="ai-recommendation"]

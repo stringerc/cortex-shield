@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-06-10T21:30:00Z",
+  "lists": {
+    "ai-chat-widgets": {
+      "url": "ai-chat-widgets.txt",
+      "version": "1.0.0",
+      "count": 35,
+      "updated": "2026-06-10T21:30:00Z"
+    },
+    "ai-search-overlays": {
+      "url": "ai-search-overlays.txt",
+      "version": "1.0.0",
+      "count": 12,
+      "updated": "2026-06-10T21:30:00Z"
+    },
+    "ai-content-injectors": {
+      "url": "ai-content-injectors.txt",
+      "version": "1.0.0",
+      "count": 15,
+      "updated": "2026-06-10T21:30:00Z"
+    },
+    "ai-social-features": {
+      "url": "ai-social-features.txt",
+      "version": "1.0.0",
+      "count": 9,
+      "updated": "2026-06-10T21:30:00Z"
+    },
+    "ai-popups": {
+      "url": "ai-popups.txt",
+      "version": "1.0.0",
+      "count": 14,
+      "updated": "2026-06-10T21:30:00Z"
+    },
+    "ai-trackers": {
+      "url": "ai-trackers.txt",
+      "version": "1.0.0",
+      "count": 14,
+      "updated": "2026-06-10T21:30:00Z"
+    }
+  }
+}

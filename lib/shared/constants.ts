@@ -196,6 +196,8 @@ export const STORAGE_KEYS = {
   vectorWeights: 'cortex_shield_vector_weights',
   lastFilterListUpdate: 'cortex_shield_last_filter_update',
   onboardingComplete: 'cortex_shield_onboarding_complete',
+  FILTER_CACHE: 'cortex_shield_filter_cache',
+  FILTER_LAST_CHECK: 'cortex_shield_filter_last_check',
 } as const;
 
 // ═══════════════════════════════════════════════════════════════

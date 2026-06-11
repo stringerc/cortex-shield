@@ -48,6 +48,7 @@ import {
 } from '../lib/action/site-policy';
 import { onContentMessage, onPopupMessage, sendToTab, broadcastToAllTabs } from '../lib/shared/messaging';
 import { extractDomain } from '../lib/shared/utils';
+import { checkForFilterUpdates, shouldCheckForUpdates } from '../lib/persistence/filter-updater';
 
 // ═══════════════════════════════════════════════════════════════
 // TAB SESSIONS
@@ -256,6 +257,10 @@ async function handlePopupMessage(
       return await exportAll();
     case 'IMPORT_SETTINGS':
       return await importAll(message.data);
+    case 'CHECK_FILTER_UPDATES': {
+      const { forceUpdateCheck } = await import('../lib/persistence/filter-updater');
+      return await forceUpdateCheck();
+    }
     default:
       return { status: 'ok' };
   }

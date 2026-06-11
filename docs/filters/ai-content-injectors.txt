@@ -1,0 +1,35 @@
+[Adblock Plus 2.0]
+! Title: CortexShield — AI Content Injectors
+! Last Modified: 2026-06-10
+
+! Grammarly
+||cdn.grammarly.com^
+##div[class*="grammarly"]
+##div[data-grammarly]
+##gr-icon
+
+! Notion AI
+||api.notion.ai^
+##div[data-testid*="notion-ai"]
+##div[class*="notion-ai"]
+
+! WordPress AI / Jetpack AI
+##div[class*="wp-ai"]
+##div[id*="jetpack-ai"]
+
+! Jasper
+||api.jasper.ai^
+##div[class*="jasper"]
+
+! GitHub Copilot (web)
+##div[class*="copilot-sidebar"]
+##div[data-testid*="copilot"]
+
+! Google "Help me write"
+##div[class*="help-me-write"]
+
+! Generic AI writing
+##div[class*="ai-writing-assistant"]
+##div[class*="ai-editor"]
+##div[class*="ai-completion"]
+##div[class*="ai-suggest"]

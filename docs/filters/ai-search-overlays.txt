@@ -1,0 +1,25 @@
+[Adblock Plus 2.0]
+! Title: CortexShield — AI Search Overlays
+! Last Modified: 2026-06-10
+
+! Google AI Overviews
+##div[data-attrid="Semanticish"]
+##div[data-snc="AI Overview"]
+##div[class*="ai-overview"]
+
+! Bing Copilot
+||copilot.microsoft.com^
+##div[id*="copilot"]
+##cib-serp
+
+! DuckDuckGo AI
+##div[class*="ai-chat"]
+
+! Perplexity
+||api.perplexity.ai^
+##div[class*="perplexity"]
+
+! Generic AI search
+##div[class*="ai-answer"]
+##div[class*="ai-search"]
+##div[data-ai-generated]

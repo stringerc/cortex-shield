@@ -1,0 +1,24 @@
+[Adblock Plus 2.0]
+! Title: CortexShield — AI Popups and Nags
+! Last Modified: 2026-06-10
+
+! "Try AI" banners
+##div[class*="try-ai"]
+##div[class*="ai-upgrade"]
+##div[class*="ai-onboarding"]
+
+! AI prompts and nags
+##div[class*="ai-banner"]
+##div[class*="ai-prompt"]
+##div[class*="ai-nudge"]
+##div[class*="ai-modal"]
+
+! "Powered by AI" badges
+##div[class*="powered-by-ai"]
+##span[class*="ai-badge"]
+##div[class*="ai-pricing"]
+
+! Generic AI popups
+##div[data-testid*="ai-popup"]
+##div[class*="ai-overlay"]
+##div[class*="ai-tooltip"]

@@ -1,0 +1,88 @@
+[Adblock Plus 2.0]
+! Title: CortexShield — AI Chat Widgets
+! Last Modified: 2026-06-10
+! Homepage: https://stringerc.github.io/cortex-shield/
+! License: MIT
+! 
+! This filter list blocks AI chat widgets and chatbot overlays.
+! Submit new rules: https://github.com/stringerc/cortex-shield/issues
+
+! Intercom
+||cdn.intercom.io^
+.intercom-lightweight-app
+#intercom-container
+##div[class="intercom-lightweight-app"]
+##div[id="intercom-container"]
+##div[class="intercom-messenger"]
+##iframe[src*="intercom"]
+
+! Drift
+||js.driftt.com^
+#drift-frame-chat
+#drift-frame-controller
+##div[id^="drift"]
+##iframe[src*="driftt.com"]
+
+! Crisp
+||cdn.crisp.chat^
+#crisp-chatbox
+##div[id^="crisp"]
+##iframe[src*="crisp.chat"]
+
+! Tidio
+||cdn.tidiochat.com^
+#tidio-chat-code
+#tidio-chat-iframe
+##div[id^="tidio"]
+
+! Zendesk AI
+||static.zdassets.com^
+#zendesk-concierge
+##div[data-zendesk-widget]
+##iframe[src*="zendesk"]
+
+! ChatGPT Embeds
+||embed.chatgpt.com^
+##div[data-chatgpt-widget]
+##div[class="chatgpt-embed"]
+##iframe[src*="embed.chatgpt.com"]
+
+! LiveChat
+##div[id^="livechat-"]
+##div[class*="livechat-widget"]
+
+! Freshchat
+||wchat.freshchat.com^
+#fc_frame
+##div[id^="freshchat"]
+
+! Help Scout
+##div#beacon-container
+##iframe[src*="helpscout"]
+
+! HubSpot
+##div#hubspot-messages-iframe-container
+
+! Ada
+##div#ada-chat-container
+
+! Botpress
+||api.botpress.io^
+##div#botpress-webchat
+
+! Landbot
+##div#LandbotFrameContainer
+
+! Kommunicate
+##div#kommunicate-widget-iframe
+
+! Qualified
+##div#qualified-embed
+
+! Gorgias
+##div#gorgias-chat-container
+
+! Generic AI chat patterns
+##div[class*="ai-chat-widget"]
+##div[class*="gpt-widget"]
+##div[data-testid*="ai-chat"]

@@ -1,0 +1,34 @@
+[Adblock Plus 2.0]
+! Title: CortexShield — AI Trackers
+! Last Modified: 2026-06-10
+
+! OpenAI analytics
+||analytics.openai.com^
+
+! Anthropic telemetry
+||telemetry.anthropic.com^
+
+! Microsoft Clarity (AI analytics)
+||cdn.clarity.ms^
+
+! Hotjar
+||static.hotjar.com^
+
+! FullStory
+||rs.fullstory.com^
+
+! Mixpanel
+||cdn.mxpnl.com^
+||api.amplitude.com^
+
+! Heap
+||cdn.heapanalytics.com^
+
+! Segment
+||cdn.segment.com^
+
+! Generic AI tracking
+||events.ai-tracking.com^
+##div[id*="ai-analytics"]
+##div[class*="ai-heatmap"]
+##div[class*="ai-session"]

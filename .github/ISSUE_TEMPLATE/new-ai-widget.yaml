@@ -1,0 +1,69 @@
+name: "🤖 New AI Widget Not Blocked"
+description: "Report an AI element that CortexShield doesn't catch"
+title: "[New AI Widget] "
+labels: ["new-rule", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve CortexShield! Fill out the info below so we can add a rule for this AI widget.
+
+  - type: input
+    id: website-url
+    attributes:
+      label: Website URL
+      description: "The page where the AI element appears"
+      placeholder: "https://example.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: AI Category
+      description: "What type of AI element is this?"
+      options:
+        - "💬 Chat Widget (Intercom, Drift, etc.)"
+        - "🔍 Search AI Overlay (Google AI Overviews, etc.)"
+        - "✍️ Content Injector (Grammarly, Notion AI, etc.)"
+        - "📱 Social AI Feature (Grok, Meta AI, etc.)"
+        - "🔔 AI Popup / Banner / Nag"
+        - "📊 AI Tracker (analytics, heatmap, etc.)"
+        - "❓ Not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What does the AI element do?
+      description: "Describe what you see — a chat bubble? An AI summary? A writing assistant popup?"
+      placeholder: "A chat widget appeared in the bottom-right corner..."
+    validations:
+      required: true
+
+  - type: input
+    id: widget-name
+    attributes:
+      label: Widget/Service Name (if known)
+      description: "The name of the service if you can tell (e.g., Intercom, Drift, Crisp)"
+      placeholder: "e.g., Intercom"
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: What mode were you in?
+      options:
+        - "👻 Ghost"
+        - "🛡️ Sentry"
+        - "🛑 Guardian"
+    validations:
+      required: true
+
+  - type: textarea
+    id: html-selector
+    attributes:
+      label: Element HTML (optional but very helpful)
+      description: "Right-click the AI element → Inspect → copy the outer HTML of the element"
+      placeholder: "<div class='intercom-lightweight-app'>...</div>"
+      render: html
