@@ -1,7 +1,0 @@
-[
-  {"id": 1, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||cdn.grammarly.com^", "resourceTypes": ["script"]}},
-  {"id": 2, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||api.notion.ai^", "resourceTypes": ["xmlhttprequest", "websocket"]}},
-  {"id": 3, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||api.jasper.ai^", "resourceTypes": ["xmlhttprequest"]}},
-  {"id": 4, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||sdk.justnotethejob.com^", "resourceTypes": ["script"]}},
-  {"id": 5, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||www2.gov.bc.ca^", "resourceTypes": ["script"]}}
-]

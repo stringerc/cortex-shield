@@ -1,6 +1,0 @@
-[
-  {"id": 1, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||copilot.microsoft.com^", "resourceTypes": ["script", "sub_frame", "xmlhttprequest"]}},
-  {"id": 2, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||assets.msn.com/bing/v1*", "resourceTypes": ["script"]}},
-  {"id": 3, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||api.perplexity.ai^", "resourceTypes": ["xmlhttprequest", "websocket"]}},
-  {"id": 4, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||you.com/api^", "resourceTypes": ["xmlhttprequest"]}}
-]

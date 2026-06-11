@@ -1,5 +1,0 @@
-[
-  {"id": 1, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||api.x.ai^", "resourceTypes": ["xmlhttprequest", "websocket"]}},
-  {"id": 2, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||grok.x.ai^", "resourceTypes": ["xmlhttprequest"]}},
-  {"id": 3, "priority": 1, "action": {"type": "block"}, "condition": {"urlFilter": "||api.meta.ai^", "resourceTypes": ["xmlhttprequest"]}}
-]

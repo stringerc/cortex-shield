@@ -1,4 +1,0 @@
-[
-  {"id": 1, "priority": 2, "action": {"type": "block"}, "condition": {"urlFilter": "||api.try-ai.com^", "resourceTypes": ["xmlhttprequest"]}},
-  {"id": 2, "priority": 2, "action": {"type": "block"}, "condition": {"urlFilter": "||cdn.aitoolhub^", "resourceTypes": ["script"]}}
-]
